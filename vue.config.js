@@ -3,7 +3,7 @@ const VConsolePlugin = require('vconsole-webpack-plugin')
 const isProduction = process.env.NODE_ENV === 'production'
 module.exports = {
   publicPath: '',
-  outputDir: '/dist',
+  outputDir: '/mobil-h5/',
 
   devServer: {
     // 设置主机地址
@@ -52,6 +52,12 @@ module.exports = {
     } else {
       // 线上环境
       console.log('--------此操作为正式环境环境--------')
+
+      config.externals = {
+        'vue': 'Vue',
+        'vue-router': 'VueRouter',
+        'vuex': 'Vuex'
+      }
     }
   },
 
