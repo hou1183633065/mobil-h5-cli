@@ -8,8 +8,7 @@
       placeholder
       left-arrow
       @click-left="onClickLeft"
-      @click-right="onClickRight"
-    />
+      @click-right="onClickRight" />
     <van-skeleton title avatar :row="3" :loading="false">
       <div>实际内容</div>
     </van-skeleton>
