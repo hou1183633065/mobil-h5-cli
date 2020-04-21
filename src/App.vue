@@ -32,7 +32,7 @@ import {
   Toast,
   NumberKeyboard,
   Skeleton
-} from "vant";
+} from 'vant'
 export default {
   components: {
     [NavBar.name]: NavBar,
@@ -43,13 +43,13 @@ export default {
   },
   methods: {
     onClickLeft() {
-      Toast("返回");
+      Toast('返回')
     },
     onClickRight() {
-      Toast("按钮");
+      Toast('按钮')
     }
   }
-};
+}
 </script>
 <style lang="scss">
 #app {

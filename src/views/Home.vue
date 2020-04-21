@@ -13,9 +13,9 @@
 </template>
 
 <script>
-import { Button } from "vant";
+import { Button } from 'vant'
 export default {
-  name: "Home",
+  name: 'Home',
   components: {
     [Button.name]: Button
   },
@@ -23,26 +23,26 @@ export default {
     const obj = {
       a: 1,
       b: 2
-    };
+    }
     if (obj.a === 1) {
-      console.log(true);
+      console.log(true)
     }
     function foo() {
-      return true;
+      return true
     } // ✗ avoid
 
-    foo();
-    console.log(obj?.a);
-    console.log(obj?.b);
-    console.log(obj?.c?.d ?? "hello");
-    console.log(obj.a === 1 ? 1 : 2);
+    foo()
+    console.log(obj?.a)
+    console.log(obj?.b)
+    console.log(obj?.c?.d ?? 'hello')
+    console.log(obj.a === 1 ? 1 : 2)
   },
   methods: {
     getElement() {
-      console.log(111);
+      console.log(111)
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

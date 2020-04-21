@@ -4,11 +4,17 @@
     <p>
       For a guide and recipes on how to configure / customize this project,
       <br />check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener"
-        >vue-cli documentation</a
+      <a
+        href="https://cli.vuejs.org"
+        target="_blank"
+        rel="noopener"
+      >vue-cli documentation</a
       >.
-      <a href="www.baodu.com" target="_blank" el="noopener"
-        >啊手机的开机啊圣诞卡</a
+      <a
+        href="www.baodu.com"
+        target="_blank"
+        el="noopener"
+      >啊手机的开机啊圣诞卡</a
       >
     </p>
     <h3>Installed CLI Plugins</h3>
@@ -17,11 +23,11 @@
 
 <script>
 export default {
-  name: "HelloWorld",
+  name: 'HelloWorld',
   props: {
     msg: String
   }
-};
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
