@@ -20,6 +20,7 @@ export default {
     [Button.name]: Button
   },
   mounted() {
+    console.log(process.env)
     const obj = {
       a: 1,
       b: 2
