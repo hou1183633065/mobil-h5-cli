@@ -1,10 +1,10 @@
-const VConsolePlugin = require("vconsole-webpack-plugin");
+const VConsolePlugin = require('vconsole-webpack-plugin')
 
-const isProduction = process.env.NODE_ENV === "production";
+const isProduction = process.env.NODE_ENV === 'production'
 module.exports = {
-  publicPath: "",
-  outputDir: "web_mhd_pony",
-  lintOnSave: true,
+  publicPath: '',
+  outputDir: '/dist',
+
   devServer: {
     // 设置主机地址
     // host: "0.0.0.0",
@@ -12,13 +12,13 @@ module.exports = {
     // port: 8089,
     // 设置代理
     proxy: {
-      "/auth": {
-        target: "https://businessservicetemporary.muheda.com/", // 接口的域名
+      '/auth': {
+        target: 'https://businessservicetemporary.muheda.com/', // 接口的域名
         ws: true, // 如果要代理 websockets
         secure: true, // 如果是https接口，需要配置这个参数
         changeOrigin: true, // 如果接口跨域，需要进行这个参数配置,将主机标头的原点更改为目标URL
         pathRewrite: {
-          "^/auth": "/auth"
+          '^/auth': '/auth'
         }
       }
     },
@@ -41,22 +41,24 @@ module.exports = {
   //       remUnit: 75
   //     })
   // },
-  configureWebpack: config => {
+  configureWebpack: (config) => {
     // config.entry = ["babel-polyfill", "./src/main.js"];
     if (!isProduction) {
       console.log(
-        "--------此操作为开发及测试环境, 默认开启控制台打印任务--------"
-      );
+        '--------此操作为开发及测试环境, 默认开启控制台打印任务--------'
+      )
       // 开发及测试环境
-      config.plugins.push(new VConsolePlugin({ enable: !isProduction }));
+      config.plugins.push(new VConsolePlugin({ enable: !isProduction }))
     } else {
       // 线上环境
-      console.log("--------此操作为正式环境环境--------");
+      console.log('--------此操作为正式环境环境--------')
     }
   },
 
   css: {
     sourceMap: true,
     requireModuleExtension: true
-  }
-};
+  },
+
+  lintOnSave: true
+}
