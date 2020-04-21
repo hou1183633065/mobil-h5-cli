@@ -4,7 +4,7 @@ const isProduction = process.env.NODE_ENV === "production";
 module.exports = {
   publicPath: "",
   outputDir: "web_mhd_pony",
-  lintOnSave: false,
+  lintOnSave: true,
   devServer: {
     // 设置主机地址
     // host: "0.0.0.0",
