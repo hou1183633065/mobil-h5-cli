@@ -25,7 +25,7 @@ module.exports = {
     'block-spacing': [2, 'always'], // 块间距
     'brace-style': [2, '1tbs', { allowSingleLine: true }], // 大括号样式允许单行
     'camelcase': [2, { properties: 'always' }], //为属性强制执行驼峰命名
-    'comma-dangle': [2, 'never'], // 逗号不使用悬挂
+    'comma-dangle': 0, // 逗号不使用悬挂
     'comma-spacing': [2, { before: false, after: true }], // 逗号间距
     'comma-style': [2, 'last'], //（默认）与数组元素，对象属性或变量声明在同一行之后和同一行需要逗号
     'constructor-super': 2,
@@ -44,7 +44,6 @@ module.exports = {
     'no-array-constructor': 1, // 不允许使用Array构造函数。除非要指定生成数组的长度
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off', // 只有开发环境可以使用console
     'no-class-assign': 2, // 不允许修改类声明的变量
-    'no-const-assign': 2, // 不能修改使用const关键字声明的变量
     'no-control-regex': 0, // 不允许正则表达式中的控制字符
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off', // 只有开发环境可以使用debugger
     'no-delete-var': 2, // 不允许在变量上使用delete操作符
@@ -131,7 +130,6 @@ module.exports = {
     'wrap-iife': [2, 'any'], //立即执行函数表达式的小括号风格
     'yield-star-spacing': [2, 'both'], // 强制执行*周围 yield*表达式的间距，两侧都必须有空格
     'yoda': [2, 'never'],
-    'prefer-const': 2, // 使用let关键字声明的变量，但在初始分配后从未重新分配变量，应改为const声明
     'object-curly-spacing': [2, 'always', { objectsInObjects: false }],// 不允许以对象元素开始和/或以对象元素结尾的对象的大括号内的间距
     'array-bracket-spacing': [2, 'never'] // 不允许数组括号内的空格
   }

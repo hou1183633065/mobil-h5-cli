@@ -20,23 +20,46 @@ export default {
     [Button.name]: Button
   },
   mounted() {
-    console.log(process.env)
-    const obj = {
-      a: 1,
-      b: 2
-    }
-    if (obj.a === 1) {
-      console.log(true)
-    }
-    function foo() {
-      return true
-    } // ✗ avoid
+    this.sendHttpData({
+      method: 'postJson',
+      url: '/tableList',
+      baseURL: '/',
+      params: {
+        userName: 'hzq',
+        password: '123456'
+      },
+      successMessage: '请求成功',
+      errorMessage: '请求失败',
+      success: (result) => {
+        console.log('result111', result)
+      },
+      error: (error) => {
+        console.log('errort111', error)
+      }
+    })
+    // console.log(111111222222)
+    // .then(res => {
+    //   console.log('result222', res)
+    // }).catch(error => {
+    //   console.log('rerror222', error)
+    // })
+    // console.log(process.env)
+    // const obj = {
+    //   a: 1,
+    //   b: 2
+    // }
+    // if (obj.a === 1) {
+    //   console.log(true)
+    // }
+    // function foo() {
+    //   return true
+    // } // ✗ avoid
 
-    foo()
-    console.log(obj?.a)
-    console.log(obj?.b)
-    console.log(obj?.c?.d ?? 'hello')
-    console.log(obj.a === 1 ? 1 : 2)
+    // foo()
+    // console.log(obj?.a)
+    // console.log(obj?.b)
+    // console.log(obj?.c?.d ?? 'hello')
+    // console.log(obj.a === 1 ? 1 : 2)
   },
   methods: {
     getElement() {

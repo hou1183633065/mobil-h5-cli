@@ -13,7 +13,7 @@ module.exports = {
     // 设置代理
     proxy: {
       '/auth': {
-        target: 'https://businessservicetemporary.muheda.com/', // 接口的域名
+        target: 'https://', // 接口的域名
         ws: true, // 如果要代理 websockets
         secure: true, // 如果是https接口，需要配置这个参数
         changeOrigin: true, // 如果接口跨域，需要进行这个参数配置,将主机标头的原点更改为目标URL
@@ -25,7 +25,7 @@ module.exports = {
 
     overlay: {
       warnings: true,
-      errors: true
+      errors: false
     }
   },
 
@@ -52,11 +52,12 @@ module.exports = {
     } else {
       // 线上环境
       console.log('--------此操作为正式环境环境--------')
-
       config.externals = {
         'vue': 'Vue',
         'vue-router': 'VueRouter',
-        'vuex': 'Vuex'
+        'vuex': 'Vuex',
+        'axios': 'axios',
+        'qs': 'Qs'
       }
     }
   },
