@@ -1,11 +1,12 @@
 <template>
   <div id="app">
     <header-nav-bar />
-
-    <keep-alive v-if="$route.meta.keepAlive">
-      <router-view></router-view>
-    </keep-alive>
-    <router-view v-else></router-view>
+    <transition name="van-slide-down">
+      <keep-alive v-if="$route.meta.keepAlive">
+        <router-view></router-view>
+      </keep-alive>
+      <router-view v-else></router-view>
+    </transition>
 
     <footer-tab-bar />
   </div>
