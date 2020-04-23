@@ -119,4 +119,4 @@ export default {
   // 生成一个全局的自增整数
   'increment': '@increment(10)'
 
-}
+};

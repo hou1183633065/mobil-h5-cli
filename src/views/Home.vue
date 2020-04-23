@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { Button } from 'vant'
+import { Button } from 'vant';
 export default {
   name: 'Home',
   components: {
@@ -31,12 +31,12 @@ export default {
       successMessage: '请求成功',
       errorMessage: '请求失败',
       success: (result) => {
-        console.log('result111', result)
+        console.log('result111', result);
       },
       error: (error) => {
-        console.log('errort111', error)
+        console.log('errort111', error);
       }
-    })
+    });
     // console.log(111111222222)
     // .then(res => {
     //   console.log('result222', res)
@@ -63,10 +63,10 @@ export default {
   },
   methods: {
     getElement() {
-      console.log(111)
+      console.log(111);
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

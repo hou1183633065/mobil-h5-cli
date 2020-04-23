@@ -1,17 +1,17 @@
-import Mock from 'mockjs'
+import Mock from 'mockjs';
 import {
   randomWord
   // ObjectTransformArray
-} from './mock_fun/mock.fun'
+} from './mock_fun/mock.fun';
 // import chinaList from './area'
-const Random = Mock.Random
+const Random = Mock.Random;
 // Mock响应模板
 Mock.setup({
   timeout: '400-1000'
-})
+});
 
 Mock.mock('/tableList', 'post', function(options) {
-  console.log(options)
+  console.log(options);
   let mockData = Mock.mock({
     'list|10': [{
       'name': '@cname',
@@ -32,15 +32,15 @@ Mock.mock('/tableList', 'post', function(options) {
       'creatTime': '@date(yyyy-MM-dd HH:mm:ss)',
       'status': Random.pick(['在线', '维护', '注销'])
     }]
-  })
+  });
 
   return {
     code: 200,
     message: '请求成功',
     success: true,
     data: mockData
-  }
-})
+  };
+});
 
 // Mock.mock('/province', 'post', function() {
 //   return Mock.mock({

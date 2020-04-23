@@ -1,6 +1,6 @@
-const VConsolePlugin = require('vconsole-webpack-plugin')
+const VConsolePlugin = require('vconsole-webpack-plugin');
 
-const isProduction = process.env.NODE_ENV === 'production'
+const isProduction = process.env.NODE_ENV === 'production';
 module.exports = {
   publicPath: '',
   outputDir: '/mobil-h5/',
@@ -46,19 +46,19 @@ module.exports = {
     if (!isProduction) {
       console.log(
         '--------此操作为开发及测试环境, 默认开启控制台打印任务--------'
-      )
+      );
       // 开发及测试环境
-      config.plugins.push(new VConsolePlugin({ enable: !isProduction }))
+      config.plugins.push(new VConsolePlugin({ enable: !isProduction }));
     } else {
       // 线上环境
-      console.log('--------此操作为正式环境环境--------')
+      console.log('--------此操作为正式环境环境--------');
       config.externals = {
         'vue': 'Vue',
         'vue-router': 'VueRouter',
         'vuex': 'Vuex',
         'axios': 'axios',
         'qs': 'Qs'
-      }
+      };
     }
   },
 
@@ -68,4 +68,4 @@ module.exports = {
   },
 
   lintOnSave: true
-}
+};
