@@ -22,10 +22,10 @@ module.exports = {
         }
       }
     },
-
+    // 警告只在终端显示，错误显示在浏览器中
     overlay: {
-      warnings: true,
-      errors: false
+      warnings: false,
+      errors: true
     }
   },
 
@@ -44,9 +44,7 @@ module.exports = {
   configureWebpack: (config) => {
     // config.entry = ["babel-polyfill", "./src/main.js"];
     if (!isProduction) {
-      console.log(
-        '--------此操作为开发及测试环境, 默认开启控制台打印任务--------'
-      );
+      console.log('--------此操作为开发及测试环境, 默认开启控制台打印任务--------');
       // 开发及测试环境
       config.plugins.push(new VConsolePlugin({ enable: !isProduction }));
     } else {
