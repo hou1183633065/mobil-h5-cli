@@ -4,7 +4,6 @@ const isProduction = process.env.NODE_ENV === 'production';
 module.exports = {
   publicPath: '',
   outputDir: '/mobil-h5/',
-
   devServer: {
     // 设置主机地址
     // host: "0.0.0.0",
@@ -28,21 +27,7 @@ module.exports = {
       errors: true
     }
   },
-
-  // chainWebpack: config => {
-  //   config.module
-  //     .rule('css')
-  //     .test(/\.css$/)
-  //     .oneOf('vue')
-  //     .resourceQuery(/\?vue/)
-  //     .use('px2rem')
-  //     .loader('px2rem-loader')
-  //     .options({
-  //       remUnit: 75
-  //     })
-  // },
   configureWebpack: (config) => {
-    // config.entry = ["babel-polyfill", "./src/main.js"];
     if (!isProduction) {
       console.log('--------此操作为开发及测试环境, 默认开启控制台打印任务--------');
       // 开发及测试环境
