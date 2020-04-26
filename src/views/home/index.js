@@ -14,6 +14,7 @@ export default {
         userName: 'hzq',
         password: '123456'
       },
+      loadingOverlay: false,
       successMessage: '请求成功',
       errorMessage: '请求失败',
       success: (result) => {

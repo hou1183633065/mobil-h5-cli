@@ -2,7 +2,7 @@
   <div id="app">
     <header-nav-bar />
 
-    <transition name="van-slide-down">
+    <transition name="van-fade">
       <keep-alive v-if="$route.meta.keepAlive">
         <router-view></router-view>
       </keep-alive>

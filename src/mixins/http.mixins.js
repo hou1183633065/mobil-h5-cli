@@ -17,7 +17,9 @@ export default {
       }
     },
     sendHttpData(params = {}) {
-      this.loadingGlobalToast();
+      let { loadingOverlay = true } = params;
+      if (loadingOverlay) this.loadingGlobalToast();
+
       httpRequest.send(params).then(result => {
         this.controllerResultData(result, params.success);
         this.controllerResultMessage(params, result);
