@@ -7,6 +7,7 @@ export default {
       if (callback) callback(result);
     },
     controllerResultMessage({ successMessage, errorMessage }, { message = '', success }) {
+      this.$toast.clear();
       if (success) {
         message = successMessage && successMessage !== true ? successMessage : message;
         if (successMessage) this.$toast.success(message);
@@ -16,12 +17,22 @@ export default {
       }
     },
     sendHttpData(params = {}) {
+      this.loadingGlobalToast();
       httpRequest.send(params).then(result => {
         this.controllerResultData(result, params.success);
         this.controllerResultMessage(params, result);
       }).catch(error => {
         this.controllerResultData(error, params.error);
         this.controllerResultMessage(params, error);
+      });
+    },
+    loadingGlobalToast() {
+      this.$toast.loading({
+        forbidClick: true,
+        className: 'global-loading',
+        duration: 0,
+        overlay: true,
+        loadingType: 'spinner',
       });
     }
   }
