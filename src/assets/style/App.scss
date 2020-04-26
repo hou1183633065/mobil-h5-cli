@@ -1,3 +1,7 @@
+@import './libs/FontSizeMixin.scss';
+@import './libs/FontWeightMixin.scss';
+@import './libs/ContentMixin.scss';
+@include each-font-size(30);
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
