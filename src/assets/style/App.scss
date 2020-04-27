@@ -2,6 +2,9 @@
 @import './libs/FontWeightMixin.scss';
 @import './libs/ContentMixin.scss';
 @include each-font-size(30);
+body {
+    @import './ResetVant.scss';
+}
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -22,6 +25,7 @@
     height: 120px;
     background-color: #fff;
 }
+
 
 .global-loading{
     background: none;

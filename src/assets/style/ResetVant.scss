@@ -1,0 +1,13 @@
+/*
+此文件为全局修改vant基础组件样式，默认覆盖body下样式
+example：
+.van-button--large{
+    height: 200px;
+}
+除修改默认样式外，还可自定义样式(需组件支持其他类命名)
+例如：
+<van-button type="super">超级按钮</van-button>
+.van-button--super{
+    height: 400px;
+}
+*/
