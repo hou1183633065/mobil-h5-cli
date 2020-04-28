@@ -8,9 +8,7 @@ import {
   controllerResponseError
 } from './controller';
 
-let instance = Axios.create({
-  baseURL: 'instance'
-});
+let instance = Axios.create();
 
 instance.interceptors.request.use(config => controllerRequestSuccess(config), error => controllerRequestError(error));
 instance.interceptors.response.use(data => controllerResponseSuccess(data), error => controllerResponseError(error));
